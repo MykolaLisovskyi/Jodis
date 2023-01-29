@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:image" content="meta.png" />
+  <title>Jodis</title>
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="fonts/stylesheet.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="css/slider2.css">
+
+  <link rel="stylesheet" href="css/popup.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/dependencyLibs/inputmask.dependencyLib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+
+
+</head>
+
+<body class="page">
+  <div class="ol-md-4 col-xs-12 b-popup block7_popup" id="popup1" style="">
+
+    <div class="popup_content">
+      <a class="popup_exit" href="javascript:PopUpHide();">×</a>
+      <p class="popup_content_name" id="popup_content_name">Заповніть форму</p>
+      <p class="popup_description">Консультант зателефонує та відповість на усі питання</p>
+      <form class="popupform" id="form1" name="form">
+        <div class="popup_form_input">
+          <input type="text" name="name" placeholder="Ім'я" required>
+          <input type="tel" name="telephone" id="phone" value="" placeholder="+38(___)___-__-__" required>
+          <input type="text" name="nameForm" id="nameForm" value="" style="display:none;">
+        </div>
+
+
+        <div class="popup_content_form_input">
+          <button type="submit" name="button" class="submit" id="subs_btn1">Зателефонуйте мені</button>
+          <div class="blur">
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <div class="ol-md-4 col-xs-12 b-popup block7_popup" id="popupItem" style="">
+
+    <div class="popup_content">
+      <a class="popup_exit" href="javascript:PopUpHideItem();">×</a>
+      <p class="popup_content_name popup_item" id="popup_content_name2"></p>
+      <p class="popup_description">Консультант зателефонує та відповість на усі питання</p>
+      <form class="popupform" id="form2" name="form2">
+        <div class="popup_form_input">
+          <input type="text" name="name2" placeholder="Ім'я та прізвище" required>
+          <input type="text" name="address2" placeholder="Адреса доставки">
+        </div>
+        <div class="popup_form_input popup_margin">
+          <input type="text" placeholder="Email" name="email2" required>
+          <input type="tel" name="telephone2" id="phone3" value="" placeholder="+38(___)___-__-__" required>
+          <input type="text" name="nameForm2" id="nameForm2" value="" style="display:none;">
+        </div>
+
+        <div class="popup_content_form_input">
+          <button type="submit" name="button" class="submit" id="subs_btn1">Зателефонуйте мені</button>
+          <div class="blur">
+
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <div class="ol-md-4 col-xs-12 b-popup block7_popup" id="popupThanks" style="">
+
+    <div class="popup_content">
+      <a class="popup_exit" href="javascript:PopUpHide2();">×</a>
+      <p class="popup_content_name" id="popup_content_name">Наш оператор свяжется с вами</p>
+
+      <a href="javascript:PopUpHide2();" class="closePopupThanks"> Закрыть</a>
+
+    </div>
+  </div>
+
+
+  <header>
+    <div class="menu">
+      <content>
+        <input id="hamburger" class="hamburger" type="checkbox" />
+        <label class="hamburger" for="hamburger">
+          <i></i>
+          <text>
+          </text>
+        </label>
+        <section class="drawer-list">
+          <ul><input id="hamburger" class="hamburger" type="checkbox" />
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Дефіцит йоду</a></li>
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Кому потрібен йод?</a></li>
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Дефіцит йоду</a></li>
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Кому потрібен йод?</a></li>
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Дефіцит йоду</a></li>
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Кому потрібен йод?</a></li>
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Дефіцит йоду</a></li>
+            <li> <a href="#" onclick="document.getElementById('hamburger').checked=false;">Кому потрібен йод?</a></li>
+
+          </ul>
+
+
+
+
+
+
+
+        </section>
+      </content>
+    </div>
+    <div class="header_content">
+      <img src="img/logo.jpg" alt="" class="logotip">
+      <div class="header_menu">
+        <div class="header_menu_phone">
+          <img src="img/header/telephone.svg" alt="">
+          <a href="tel:(063) 111 90 60">(063) 111 90 60</a>
+        </div>
+        <a href="javascript:PopUpShow();" class="header_menu_callme">Зателефонуйте нам</a>
+        <div class="header_menu_social">
+          <a href=""><img src="img/header/telegram.svg" alt=""></a>
+          <a href=""><img src="img/header/viber.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="block1">
+      <img src="img/block1/fon.png" alt="" class="bfon11">
+      <img src="img/block1/elements.png" alt="" class="elements">
+      <div class="block1_content">
+        <img src="img/block1/img1.png" alt="" class="img">
+
+        <div class="block1_content_left">
+          <div class="block1_content_tittle">
+            <p>Рецепт</p>
+            <p>здорової сім'ї</p>
+          </div>
+          <p class="block1_content_info">Одне саше на день та склянка води!</p>
+          <img src="img/block1/img1.png" alt="" class="imgMob">
+
+          <a href="javascript:PopUpShow();">Дізнатися секрет</a>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="block2">
+      <img src="img/block2/elements.png" class="elements" alt="">
+      <div class="block2_content">
+        <div class="block2_content_tittle">
+          <p>70% населения України</p>
+          <p>страждають на дефіцит йоду</p>
+          <p>Які захворювання виникають внаслідок його нестачі?</p>
+        </div>
+        <div class="block2_content_card">
+          <div class="block2_content_card_left">
+            <img src="img/block2/girl.png" alt="">
+            <div class="block2_content_card_left_circle">
+              <div class="circle">
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 6.25V43.75L18.75 25V6.25H0Z" fill="white" />
+                  <path d="M31.25 6.25V43.75L50 25V6.25H31.25Z" fill="white" />
+                </svg>
+                <p>Ви можете хворіти і не підозрювати, що
+                  проблему можна легко усунути</p>
+              </div>
+            </div>
+          </div>
+          <div class="block2_content_card_right">
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item1.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Ендокринні</p>
+                <p>Порушення функцій щитовидної залози, зоб, цукровий діабет</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item2.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Імунні</p>
+                <p>Часті інфекційні та застудні захворювання</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item3.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Гінекологічні</p>
+                <p>Порушення менструальних функцій, нерегулярні місячні, безпліддя, мастопатія</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item4.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Кардіологічні</p>
+                <p>Атеросклероз, аритмія, підвищений тиск</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item5.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Анемічні</p>
+                <p>Знижений рівень гемоглобіну</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item6.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Остеохондрозні</p>
+                <p>Слабкість та болі в руках, радикуліт</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item7.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Бронхолегеневі</p>
+                <p>Хронічні бронхіти та ГРЗ</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item8.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Дерматологічні</p>
+                <p>Випадіння волосся, погіршення стану нігтів та шкіри</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item9.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Соматичні</p>
+                <p>Хронічна втома, діарея та закрепи, зниження ваги, сонливість, часті головні болі</p>
+              </div>
+            </div>
+            <div class="block2_content_card_right_item">
+              <div class="block2_content_card_right_item_icon">
+                <img src="img/block2/item10.svg" alt="">
+
+              </div>
+              <div class="block2_content_card_right_item_info">
+                <p>Психічні</p>
+                <p>Дратівливість, подавлений настрій, зниження інтелекту, депресія</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block3">
+      <img src="img/block3/elements.png" alt="" class="elements">
+
+      <div class="block3_content">
+        <div class="block3_content_tittle">
+          <p>Кому йод потрібен, <span>як повітря?</span></p>
+          <p>Від його нестачі страждають ті, кого ми найбільше любимо</p>
+        </div>
+        <div class="block3_content_card">
+          <div class="block3_content_card_item">
+            <img src="img/block3/img1.png" alt="">
+            <p>Вагітні</p>
+            <p>Знижується ризик викиднів, передчасних пологів, ризик народження розумово відсталих дітей</p>
+          </div>
+          <div class="block3_content_card_item">
+            <img src="img/block3/img2.png" alt="">
+            <p>Діти</p>
+            <p>Покращується фізичний і розумовий розвиток</p>
+          </div>
+          <div class="block3_content_card_item">
+            <img src="img/block3/img3.png" alt="">
+            <p>Люди похилого віку</p>
+            <p>Знижується рівень цукру, тиск, профілактика атеросклерозу та онкозахорювань</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block4">
+      <div class="block4_content">
+        <div class="block4_content_tittle">
+          <p>Чи будь-який йод <span>корисний?</span></p>
+          <p>Можна просто купити в аптеці пляшечку йоду і розвести у воді.Чи ні?</p>
+        </div>
+        <div class="block4_content_card">
+          <div class="block4_content_card_item">
+            <img src="img/block4/img1.png" alt="">
+            <p>Йод у мінеральній формі</p>
+            <p>Розчин йоду чи таблетки просто не засвоюються в людському організмі. Це як їсти цвяхи, щоб підвищити рівень заліза</p>
+          </div>
+          <div class="block4_content_card_item">
+            <img src="img/block4/img2.png" alt="">
+            <p>Розчин біоактивного йоду</p>
+            <p>Виробляється в Україні понад 20 років. Це продукт, створений з урахуванням індивідуальних потреб організму</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block5">
+      <img src="img/block5/elements.png" alt="" class="elements">
+
+      <div class="block5_content">
+        <div class="block5_content_left">
+          <img src="img/block5/img1.png" alt="">
+          <p>Затверджено МОЗ України. Висновок №05.03.02-06/58431 від 31.12.2015 р.</p>
+        </div>
+        <div class="block5_content_right">
+          <p class="block5_content_right_tittle">Biodine Jodis+Se</p>
+          <p class="block5_content_right_description">біоактивний йод у саше з додаванням селену</p>
+          <p class="block5_content_right_info">Ми використовуємо найбільш безпечний і біологічно доступний препарат, який містить селен - цитрат селену.
+            Йод і селен виконують наступні функції:</p>
+          <div class="block5_content_right_list">
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> підсилюють імунітет</p>
+            </div>
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> є сильними антиоксидантами
+              </p>
+            </div>
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> знижують ризик онкозахворювань
+              </p>
+            </div>
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> нормалізують обмінні процеси в організмі
+              </p>
+            </div>
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> покращують репродуктивну функцію
+
+              </p>
+            </div>
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> стабілізують роботу нервової системи
+
+              </p>
+            </div>
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> нормалізують роботу ендокринної системи
+
+
+              </p>
+            </div>
+            <div class="block5_content_right_list_item">
+              <div></div>
+              <p> підсилюють інтелектуальний розвиток, особливо у дітей
+
+              </p>
+            </div>
+          </div>
+          <div class="block5_content_right_bottom">
+            <p>Тепер Вам не потрібно відміряти потрібну норму концентрату - просто вилийте вміст саше у склянку води - і залишайтеся здоровими!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="block6">
+      <img src="img/block6/elements.png" alt="" class="elements">
+
+      <div class="block6_content">
+        <div class="block6_content_left">
+          <img src="img/block6/img1.png" alt="">
+        </div>
+        <div class="block6_content_right">
+          <p class="block6_content_right_tittle">Вітграсс йодований</p>
+          <p class="block6_content_right_description">сік з паростків пшениці з додаванням йоду</p>
+          <p class="block6_content_right_info">Вітграсс - це «зелень пшениці», а точніше сік з молодих пагонів пшениці. Це рослинний вітамінно-мінеральний комплекс, який сприяє омолодженню організму людини, тому що в ньому містяться вітаміни групи А,
+            В і Е, необхідні для збалансованого функціонування органів, зростання здорових клітин і зовнішньої краси.</p>
+          <div class="block6_content_right_list">
+            <p class="block6_content_right_list_tittle">Ось тільки деякі цифри:</p>
+            <div class="block6_content_right_list_item">
+              <div></div>
+              <p> у 11 разів більше кальцію і в 30 разів більше вітаміну В, ніж в молоці
+              </p>
+            </div>
+            <div class="block6_content_right_list_item">
+              <div></div>
+              <p> у 6,5 разів більше каротину і в 5 разів більше заліза, ніж в шпинаті
+
+              </p>
+            </div>
+            <div class="block6_content_right_list_item">
+              <div></div>
+              <p> у 7 разів більше вітаміну С, ніж в апельсинах
+
+              </p>
+            </div>
+            <div class="block6_content_right_list_item">
+              <div></div>
+              <p>100 найважливіших для людини мінералів і вітамінів, включаючи В12
+
+              </p>
+            </div>
+            <div class="block6_content_right_list_item">
+              <div></div>
+              <p> 30 мл соку - це корисні речовини 1,5 кг свіжих зелених овочів
+
+
+              </p>
+            </div>
+            <div class="block6_content_right_list_item">
+              <div></div>
+              <p> на 70% складається з хлорофілу - «концентрованої сонячної енергії»
+
+
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="block7">
+      <div class="block7_content">
+        <div class="block7_content_tittle">
+          <p>Провідні клініки рекомендують</p>
+          <p>пацієнтам <span>Biodine Jodis</span></p>
+          <p>Як для лікування захворювань, пов’язаних з йододефіцитом - так і для профілактики</p>
+        </div>
+        <div class="block7_content_card">
+          <img src="img/block7/img1.png" alt="">
+          <img src="img/block7/img2.png" alt="">
+          <img src="img/block7/img3.png" alt="">
+          <img src="img/block7/img4.png" alt="">
+
+        </div>
+      </div>
+
+    </div>
+    <div class="block8">
+
+      <img class="block8_bottom_fon" src="img/block8/bottomFon.png" alt="">
+      <div class="block8_content">
+        <div class="block8_content_left">
+          <img src="img/block8/img1.png" alt="">
+          <div class="block8_content_card_left_circle">
+            <div class="circle">
+
+              <p>Скористайтеся знижкою на консультацію ендокринолога Вищої категорії у клініці Endocrin Medical</p>
+            </div>
+          </div>
+          <div class="block8_content_card_left_circle2">
+            <div class="circle">
+
+              <p>-50%</p>
+            </div>
+          </div>
+        </div>
+        <div class="block8_content_right">
+          <div class="block8_content_right_tittle">
+            <p>Чи потрібно взагалі вам </p>
+            <p>додавати в раціон йод?</p>
+          </div>
+          <form class="" id="form3" name="form">
+            <div class="form_tittle">
+              <p>Заповніть форму просто зараз, </p>
+              <p>щоб заощадити 300 грн та отримати поради лікаря</p>
+            </div>
+            <div class="input">
+              <input type="text" placeholder="Имя" name="name" required>
+              <input type="tel" name="telephone" id="phone2" value="" placeholder="+38(___)___-__-__" required>
+              <input type="text" name="nameForm" id="nameForm" value="Форма - Поради лікаря" style="display:none;">
+
+            </div>
+            <button type="submit" name="button">Отримати знижку</button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="block9">
+      <img src="img/block9/elements.png" alt="" class="elements">
+
+      <div class="block9_content">
+        <div class="sliderKolya2 fadeInUp wow" data-wow-delay="0.3s" style="z-index:55;">
+
+          <div class="slider2">
+            <div class="slider__wrapper2">
+              <div class="slider__item2">
+                <div class="slider_content">
+                  <div class="slider_profile">
+                    <div class="slider_profile_img">
+                      <img src="img/block9/img1.png" alt="">
+                      <img src="img/block9/forImg.png" alt="">
+                    </div>
+                    <div class="slider_profile_name">
+                      <p>Ірина Тішко</p>
+                      <p>нотаріус</p>
+                    </div>
+                  </div>
+                  <div class="slider_info">
+                    <p>В августе 2017 года на УЗИ обнаружили узел щитовидной железы. С этого времени я начала принимать Йодис ежедневно по пакетику в день.
+                      Но узелок мой все равно немного рос. Меня это беспокоило и я решила увеличить дозу. Когда я начала принимать по 3 пакетика в день, мой узел перестал увеличиваться и с июля 2020 его размер не изменился. Продолжаю пить Йодис в той
+                      же дозе и очень верю, что скоро он уменьшится в размере</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item2">
+                <div class="slider_content">
+                  <div class="slider_profile">
+                    <div class="slider_profile_img">
+                      <img src="img/block9/img2.png" alt="">
+                      <img src="img/block9/forImg.png" alt="">
+                    </div>
+                    <div class="slider_profile_name">
+                      <p>Ольга Данченко</p>
+                      <p>косметолог</p>
+                    </div>
+                  </div>
+                  <div class="slider_info">
+                    <p>Добрый день, меня зовут Ольга. По счастливой случайности начала принимать "Сок из ростков пшеницы - йодированный". В первые несколько дней могу отметить улучшение работы желудочно- кишечного тракта, а также повышение общего
+                      тонуса организма, и хорошего настроения. Не рассчитывала на такой быстрый результат. Буду делиться с вами новыми впечатлениями и эмоциями.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item2">
+                <div class="slider_content">
+                  <div class="slider_profile">
+                    <div class="slider_profile_img">
+                      <img src="img/block9/img3.png" alt="">
+                      <img src="img/block9/forImg.png" alt="">
+                    </div>
+                    <div class="slider_profile_name">
+                      <p>Валерій Миколайович</p>
+                    </div>
+                  </div>
+                  <div class="slider_info">
+                    <p>Мене звати Валерiй Миколайович, менi 70 рокiв, працюю в профкомi державноi установи. Упродовж року я i моя сiмя вживаемо продукт Biodine jodis . За цей перiод нiхто з нас не хворiв. По своiй роботi я за цей перiод контактував з
+                      людьми, якi були iнфiкованi коронавiрусом, а потiм перехворiли, але, я думаю, завдяки такому продукту, як Biodine jodis хвороба мене оминула. Дякую за це розробникам iвиробникам.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item2">
+                <div class="slider_content">
+                  <div class="slider_profile">
+                    <div class="slider_profile_img">
+                      <img src="img/block9/img1.png" alt="">
+                      <img src="img/block9/forImg.png" alt="">
+                    </div>
+                    <div class="slider_profile_name">
+                      <p>Ірина Тішко</p>
+                      <p>нотаріус</p>
+                    </div>
+                  </div>
+                  <div class="slider_info">
+                    <p>В августе 2017 года на УЗИ обнаружили узел щитовидной железы. С этого времени я начала принимать Йодис ежедневно по пакетику в день.
+                      Но узелок мой все равно немного рос. Меня это беспокоило и я решила увеличить дозу. Когда я начала принимать по 3 пакетика в день, мой узел перестал увеличиваться и с июля 2020 его размер не изменился. Продолжаю пить Йодис в той
+                      же дозе и очень верю, что скоро он уменьшится в размере</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item2">
+                <div class="slider_content">
+                  <div class="slider_profile">
+                    <div class="slider_profile_img">
+                      <img src="img/block9/img1.png" alt="">
+                      <img src="img/block9/forImg.png" alt="">
+                    </div>
+                    <div class="slider_profile_name">
+                      <p>Ірина Тішко</p>
+                      <p>нотаріус</p>
+                    </div>
+                  </div>
+                  <div class="slider_info">
+                    <p>В августе 2017 года на УЗИ обнаружили узел щитовидной железы. С этого времени я начала принимать Йодис ежедневно по пакетику в день.
+                      Но узелок мой все равно немного рос. Меня это беспокоило и я решила увеличить дозу. Когда я начала принимать по 3 пакетика в день, мой узел перестал увеличиваться и с июля 2020 его размер не изменился. Продолжаю пить Йодис в той
+                      же дозе и очень верю, что скоро он уменьшится в размере</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item2">
+                <div class="slider_content">
+                  <div class="slider_profile">
+                    <div class="slider_profile_img">
+                      <img src="img/block9/img1.png" alt="">
+                      <img src="img/block9/forImg.png" alt="">
+                    </div>
+                    <div class="slider_profile_name">
+                      <p>Ірина Тішко</p>
+                      <p>нотаріус</p>
+                    </div>
+                  </div>
+                  <div class="slider_info">
+                    <p>В августе 2017 года на УЗИ обнаружили узел щитовидной железы. С этого времени я начала принимать Йодис ежедневно по пакетику в день.
+                      Но узелок мой все равно немного рос. Меня это беспокоило и я решила увеличить дозу. Когда я начала принимать по 3 пакетика в день, мой узел перестал увеличиваться и с июля 2020 его размер не изменился. Продолжаю пить Йодис в той
+                      же дозе и очень верю, что скоро он уменьшится в размере</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__item2">
+                <div class="slider_content">
+                  <div class="slider_profile">
+                    <div class="slider_profile_img">
+                      <img src="img/block9/img1.png" alt="">
+                      <img src="img/block9/forImg.png" alt="">
+                    </div>
+                    <div class="slider_profile_name">
+                      <p>Ірина Тішко</p>
+                      <p>нотаріус</p>
+                    </div>
+                  </div>
+                  <div class="slider_info">
+                    <p>В августе 2017 года на УЗИ обнаружили узел щитовидной железы. С этого времени я начала принимать Йодис ежедневно по пакетику в день.
+                      Но узелок мой все равно немного рос. Меня это беспокоило и я решила увеличить дозу. Когда я начала принимать по 3 пакетика в день, мой узел перестал увеличиваться и с июля 2020 его размер не изменился. Продолжаю пить Йодис в той
+                      же дозе и очень верю, что скоро он уменьшится в размере</p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+          <a class="slider__control2 slider__control_left2" href="#" role="button"></a>
+          <a class="slider__control2 slider__control_right2 slider__control_show2" href="#" role="button"></a>
+        </div>
+      </div>
+    </div>
+    <div class="block10">
+      <img src="img/block10/elements.png" alt="" class="elements">
+      <img src="img/block10/elements2.png" alt="" class="elements2">
+
+      <div class="block10_content">
+        <div class="block10_content_tittle">
+          <p>Будь здоровим</p>
+          <p><span>Доступніше, ніж ви думаєте</span></p>
+          <p>На шкідливі звички ви напевно витрачаєте більше</p>
+        </div>
+        <div class="block10_content_card">
+          <div class="block10_content_card_item">
+            <img src="img/block10/img1.png" alt="">
+            <div class="block10_content_card_item_tittle">
+              <p>Biodine Jodis </p>
+              <p>для дорослих</p>
+            </div>
+            <p class="block10_content_card_item_description">
+              28 саше по 5 мл
+            </p>
+            <p class="block10_content_card_item_sklad">200мкг йоду та 30 мкг селену на день</p>
+            <p class="block10_content_card_item_price">349 грн</p>
+            <a href="javascript:PopUpShowItem1()">Замовити</a>
+          </div>
+          <div class="block10_content_card_item">
+            <img src="img/block10/img2.png" alt="">
+            <div class="block10_content_card_item_tittle">
+              <p>Biodine Jodis </p>
+              <p>для дітей</p>
+            </div>
+            <p class="block10_content_card_item_description">
+              28 саше по 5 мл
+            </p>
+            <p class="block10_content_card_item_sklad">100 мкг йоду та 10 мкг селену на день</p>
+            <p class="block10_content_card_item_price">349 грн</p>
+            <a href="javascript:PopUpShowItem2()">Замовити</a>
+          </div>
+          <div class="block10_content_card_item">
+            <img src="img/block10/img3.png" alt="">
+            <div class="block10_content_card_item_tittle">
+              <p>Biodine Jodis </p>
+              <p>для вагітних</p>
+            </div>
+            <p class="block10_content_card_item_description">
+              28 саше по 5 мл
+            </p>
+            <p class="block10_content_card_item_sklad">300 мкг йоду та 40 мкг селену на день</p>
+            <p class="block10_content_card_item_price">399 грн</p>
+            <a href="javascript:PopUpShowItem3()">Замовити</a>
+          </div>
+          <div class="block10_content_card_item">
+            <img src="img/block10/img4.png" alt="">
+            <div class="block10_content_card_item_tittle">
+              <p>Сік з паростків пшениці Wheatgrass з додаванням йоду</p>
+            </div>
+            <p class="block10_content_card_item_description">
+              15 саше по 30 мл
+            </p>
+            <p class="block10_content_card_item_sklad">Вітамінно-мінеральний комплекс</p>
+            <p class="block10_content_card_item_price">499 грн</p>
+            <a href="javascript:PopUpShowItem4()">Замовити</a>
+          </div>
+
+          <div class="block10_content_card_item">
+            <img src="img/block10/img5.png" alt="">
+            <div class="block10_content_card_item_tittle">
+              <p>Сік з паростків пшениці Wheatgrass з додаванням йоду</p>
+            </div>
+            <p class="block10_content_card_item_description">
+              30 саше по 30 мл
+            </p>
+            <p class="block10_content_card_item_sklad">Вітамінно-мінеральний комплекс</p>
+            <p class="block10_content_card_item_price">949 грн</p>
+            <a href="javascript:PopUpShowItem5()">Замовити</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="block11">
+      <img src="img/block11/elements.png" alt="" class="elements">
+
+      <img src="img/block11/fon.png" alt="" class="bfon">
+
+      <div class="block11_content">
+        <img src="img/block11/img.png" alt="" class="img">
+        <div class="block11_content_tittle">
+          <p>Заощаджуйте,</p>
+          <p>пропозиція для родини!</p>
+        </div>
+        <img src="img/block11/img.png" alt="" class="imgMobile">
+
+        <div class="block11_content_card">
+
+          <div class="block11_content_card_item">
+            <p>12 упаковок по 28 саше</p>
+            <p>2999 грн</p>
+          </div>
+          <div class="block11_content_card_item">
+            <p>3 для дітей + 3 для вагітних + 4 Вітграс йодований</p>
+            <p>2999 грн</p>
+          </div>
+          <div class="block11_content_card_item">
+            <p>8 упаковок Вітграс йодований</p>
+            <p>2999 грн</p>
+          </div>
+        </div>
+        <a href="javascript:PopUpShow();">Замовити</a>
+      </div>
+    </div>
+    <div class="block12">
+      <img src="img/block12/elements.png" alt="" class="elements">
+
+      <div class="block12_content">
+        <div class="block12_content_tittle">
+          <p>Поширені <span>запитання</span></p>
+          <p>Якщо навіть ви не знайшли якоїсь інформації - можете завжди звернутися до консультанта</p>
+        </div>
+        <div class="block12_content_card">
+          <div class="block12_content_card_left">
+            <div class="slider">
+              <div class="slider__wrapper">
+                <div class="slider__items">
+                  <div class="slider__item">
+                    <div style="height: 100%; "><img src="img/block12/slider/img1.png" alt=""></div>
+                  </div>
+                  <div class="slider__item">
+                    <div style="height: 100%;  ">section2<img src="img/block12/slider/img1.png" alt=""></div>
+                  </div>
+                  <div class="slider__item">
+                    <div style="height: 100%; ">section3<img src="img/block12/slider/img1.png" alt=""></div>
+                  </div>
+                  <div class="slider__item">
+                    <div style="height: 100%; ">section4<img src="img/block12/slider/img1.png" alt=""></div>
+                  </div>
+                  <div class="slider__item">
+                    <div style="height: 100%; ">section5<img src="img/block12/slider/img1.png" alt=""></div>
+                  </div>
+                  <div class="slider__item">
+                    <div style="height: 100%; ">section6<img src="img/block12/slider/img1.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+              <a class="slider__control slider__control_prev" href="#" role="button"></a>
+              <a class="slider__control slider__control_next slider__control_show" href="#" role="button"></a>
+            </div>
+          </div>
+          <div class="block12_content_card_right">
+            <div class="block12_content_card_right_item active" onclick="javascript:select1Show();">
+              <div class="block12_content_card_right_item_select">
+                <p> Спосіб оплати та замовлення</p>
+                <div class="button"> <img src="img/block12/arrow.svg" alt=""></div>
+              </div>
+              <div class="block12_content_card_right_item_info">
+                <p>При оформленні замовлення ви можете обрати один із зручних для вас способів оплати:</p>
+                <div class="block12_content_card_right_item_info_list">
+                  <div></div>
+                  <p>Готівкою (тільки для самовивозу)</p>
+                </div>
+                <div class="block12_content_card_right_item_info_list">
+                  <div></div>
+                  <p>Оплата на карту Приват Банк: після оформлення замовлення на сайті вам будуть надіслані реквізити для оплати в смс-повідомленні чи у Viber</p>
+                </div>
+                <p>Після успішної оплати просимо повідомити нас повідомленням у Viber/ Telegram за номером +38 (063) 111 60 90</p>
+                <p> Відправка з післяплатою (накладений платіж): замовлення можна оплатити при отриманні у відділенні (до загальної суми замовлення додається комісія за накладений платіж)</p>
+              </div>
+            </div>
+            <div class="block12_content_card_right_item">
+              <div class="block12_content_card_right_item_select">
+                <p> Доставка та орієнтовані строки</p>
+                <div class="button"> <img src="img/block12/arrow.svg" alt=""></div>
+              </div>
+              <div class="block12_content_card_right_item_info">
+                <p>При оформленні замовлення ви можете обрати один із зручних для вас способів оплати:</p>
+                <div class="block12_content_card_right_item_info_list">
+                  <div></div>
+                  <p>Готівкою (тільки для самовивозу)</p>
+                </div>
+                <div class="block12_content_card_right_item_info_list">
+                  <div></div>
+                  <p>Оплата на карту Приват Банк: після оформлення замовлення на сайті вам будуть надіслані реквізити для оплати в смс-повідомленні чи у Viber</p>
+                </div>
+                <p>Після успішної оплати просимо повідомити нас повідомленням у Viber/ Telegram за номером +38 (063) 111 60 90</p>
+                <p> Відправка з післяплатою (накладений платіж): замовлення можна оплатити при отриманні у відділенні (до загальної суми замовлення додається комісія за накладений платіж)</p>
+              </div>
+            </div>
+            <div class="block12_content_card_right_item">
+              <div class="block12_content_card_right_item_select">
+                <p> Зберігання та термін придатності</p>
+                <div class="button"> <img src="img/block12/arrow.svg" alt=""></div>
+              </div>
+              <div class="block12_content_card_right_item_info">
+                <p>При оформленні замовлення ви можете обрати один із зручних для вас способів оплати:</p>
+                <div class="block12_content_card_right_item_info_list">
+                  <div></div>
+                  <p>Готівкою (тільки для самовивозу)</p>
+                </div>
+                <div class="block12_content_card_right_item_info_list">
+                  <div></div>
+                  <p>Оплата на карту Приват Банк: після оформлення замовлення на сайті вам будуть надіслані реквізити для оплати в смс-повідомленні чи у Viber</p>
+                </div>
+                <p>Після успішної оплати просимо повідомити нас повідомленням у Viber/ Telegram за номером +38 (063) 111 60 90</p>
+                <p> Відправка з післяплатою (накладений платіж): замовлення можна оплатити при отриманні у відділенні (до загальної суми замовлення додається комісія за накладений платіж)</p>
+              </div>
+            </div>
+            <script type="text/javascript">
+              $(".block12_content_card_right_item").click(function() {
+                $(".block12_content_card_right_item").removeClass("active");
+
+                $(this).toggleClass("active");
+              });
+            </script>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="block13">
+      <div class="block13_content">
+        <div class="block13_content_tittle">
+          <p>Зробимо Україну <span>здоровою разом!</span></p>
+          <p>Пропонуємо партнерство клінікам, лікарям-ендокринологам, екомагазинам, аптекам</p>
+        </div>
+        <a href="javascript:PopUpShow();">Дізнатися умови</a>
+      </div>
+
+    </div>
+  </main>
+  <footer>
+    <p>©2021. Biodine Jodis. Усі права захищено</p>
+    <a href="https://tkachuk.pro"><img src="img/footer/img1.png" alt=""></a>
+  </footer>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/slider2.js"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
+  <script>
+
+  </script>
+  <script src="js/jquery.maskedinput.js"></script>
+
+  <script type="text/javascript">
+    $('#form3').submit(function(e) {
+      e.preventDefault()
+      e.stopImmediatePropagation()
+      $.post(
+        'main.php', // адрес обработчика
+        $("#form3").serialize(), // отправляемые данные
+
+        function(msg) { // получен ответ сервера
+          PopUpHide();
+          PopUpShow2();
+        }
+      );
+
+      return false;
+    });
+    $('#form1').submit(function(e) {
+      e.preventDefault()
+      e.stopImmediatePropagation()
+      $.post(
+        'main.php', // адрес обработчика
+        $("#form1").serialize(), // отправляемые данные
+
+        function(msg) { // получен ответ сервера
+          PopUpHide();
+          PopUpShow2();
+        }
+      );
+
+      return false;
+    });
+    $('#form2').submit(function(e) {
+      e.preventDefault()
+      e.stopImmediatePropagation()
+      $.post(
+        'main2.php', // адрес обработчика
+        $("#form2").serialize(), // отправляемые данные
+
+        function(msg) { // получен ответ сервера
+          PopUpHideItem();
+          PopUpShow2();
+        }
+      );
+
+      return false;
+    });
+    $(document).ready(function() {
+      $("#phone").mask("+38 (999) 999-99-99");
+      $("#phone2").mask("+38 (999) 999-99-99");
+      $("#phone3").mask("+38 (999) 999-99-99");
+
+    });
+  </script>
+</body>
+
+</html>

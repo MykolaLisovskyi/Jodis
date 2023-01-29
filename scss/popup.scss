@@ -1,0 +1,374 @@
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+@mixin adaptiv-line($pcSize, $mobSize) {
+ $addSize: $pcSize - $mobSize;
+ $maxWidth: $maxWidth - 320;
+ @media only screen and (min-width: 1920px){
+    line-height: #{$pcSize + px};
+  }
+  @media only screen and (max-width: 1920px){
+    line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+   }
+}
+
+
+.b-popup{
+    position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: none;
+align-items: center;
+ justify-content: center;
+ background-color: rgba(0, 0, 0, 0.6);
+ z-index: 999998;
+ font-family: 'PT Sans Caption', sans-serif;
+}
+
+
+
+.popup_content{
+  background: white;
+display: flex;
+flex-flow: column;
+position: relative;
+z-index: 50;
+padding-top: 70px;
+padding-bottom: 70px;
+padding-right: 100px;
+padding-left: 100px;
+max-width:754px;
+min-width: 355px;
+
+@media only screen and (max-width:740px){
+width: 90%;
+padding: 50px;
+min-width: inherit;
+
+}
+@media only screen and (max-width:580px){
+width: 90%;
+}
+@media only screen and (max-width:450px){
+  width: 95%;
+  padding: 30px 15px;
+
+}
+
+  .popup_exit{
+    width: 50px;
+    height: 50px;
+    background: #FFB93D;
+  box-shadow: 5px 15px 27px rgba(255, 185, 61, 0.3);
+  border-radius: 90px;
+    top:20px;
+      right: 20px;
+      position: absolute;
+      text-align: center;
+      color: black;
+      font-size: 40px;
+      font-weight: 400;
+      place-items: center;
+      place-content: center;
+      display: flex;
+      transition: 0.3s;
+      color: white;
+      @media only screen and (max-width:650px){
+width: 40px;
+height: 40px;
+}
+@media only screen and (max-width:500px){
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+
+}
+@media only screen and (max-width:420px){
+top: 10px;
+right: 10px;
+}
+@media only screen and (max-width:350px){
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+}
+    &:hover{
+opacity: 0.8;
+    }
+
+  }
+  .popup_content_name{
+    font-weight: 900;
+    font-size: 40px;
+    @include adaptiv-font(40,22);
+    line-height: 70px;
+    @include adaptiv-line(70,37);
+    text-align: center;
+    color: #483A3A;
+  }
+  .popup_item{
+    margin-bottom: 20px;
+    @include adaptiv-font(35,22);
+
+    @include adaptiv-line(40,28);
+    @media only screen and (max-width:600px){
+      margin-top: 15px;
+margin-bottom: 0px;
+}
+  }
+.popup_description{
+  font-size: 18px;
+line-height: 26px;
+@include adaptiv-font(18,16);
+@include adaptiv-line(26,20);
+text-align: center;
+color: #999191;
+margin-top: 5px;
+}
+
+  form{
+    margin-top: 45px;
+
+    @media only screen and (max-width:600px){
+margin-top: 25px;
+}
+.popup_margin{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  @media only screen and (max-width:550px){
+    margin-top: 15px;
+    margin-bottom: 0px;
+
+}
+}
+
+.popup_form_input{
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (max-width:550px){
+flex-flow: column;
+}
+}
+.address{
+  width: 100% !important;
+}
+input{
+  @media only screen and (max-width:550px){
+width: 100%;
+}
+&:not(:last-child){
+  @media only screen and (max-width:550px){
+  margin-bottom: 15px;
+}
+}
+  font-family: Gilroy;
+  width: 47.3%;
+  border:none;
+  padding:20px 0px;
+text-align: left;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+color: #999191;
+border:0px;
+background: #F7F7F7;
+border-radius: 40px;
+padding-left: 21px;
+
+@media only screen and (max-width: 400px){
+width: 100%;
+max-width: inherit;
+min-width: inherit;
+padding: 18px 20px;
+}
+&::placeholder{
+  color: #999191;
+
+}
+
+}
+.c-checkbox{
+display: flex;
+place-items:center;
+margin-top: 20px;
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox+label {
+  align-items: center;
+  padding-left: 35px;
+  user-select: none;
+  position: relative;
+      color: rgba(0,0,0,.6);
+      font-size: 13px;
+      a{
+        color: rgba(0,0,0,.6);
+
+        border-bottom: .1rem dashed rgba(0,0,0,.4);
+    cursor: pointer;
+    transition: border-color .2s ease;
+      }
+}
+.custom-checkbox+label::before {
+  content: '';
+  top: 50%;
+  transform:translate(0%, -50%);
+  position: absolute;
+  left: 0px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid rgba(0,0,0,.5);
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  height: 22px;
+  width: 22px;
+}
+.custom-checkbox:checked+label::before {
+  border-color: rgba(0,0,0,.5);
+  background-color: white;
+  background-image: url("../img/popup/check-g.svg");
+}
+}
+    .popup_content_form_input{
+
+      button{
+        cursor: pointer;
+        font-family: Gilroy;
+        margin-top: 33px;
+        border:none;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding:16px 40px;
+        background: #6EC844;
+        box-shadow: 5px 15px 27px rgba(110, 200, 68, 0.35);
+        border-radius: 40px;
+
+        transition: box-shadow 0.3s ease,background 0.3s ease;
+        @media only screen and (max-width:550px){
+        margin-top: 20px;
+      }
+        &:hover{
+          background: #F24705;
+        box-shadow: 5px 15px 27px rgba(242, 71, 5, 0.35);
+        }
+      }
+
+
+  }
+  }
+
+}
+.closePopupThanks{
+  font-family: Gilroy;
+  margin-top: 33px;
+  border:none;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding:16px 40px;
+  background: #6EC844;
+  box-shadow: 5px 15px 27px rgba(110, 200, 68, 0.35);
+  border-radius: 40px;
+
+  transition: box-shadow 0.3s ease,background 0.3s ease;
+
+  &:hover{
+    background: #F24705;
+  box-shadow: 5px 15px 27px rgba(242, 71, 5, 0.35);
+  }
+  }
+.closePop{
+
+  margin-top: 10px;
+  border: 3px solid #dc0303;
+  background-color: #dc0303;
+  width: 100%;
+  padding:20px 0px;
+  font-size: 21px;
+  @include adaptiv-font(21,18);
+  font-family: "MazdaTypeCyrillic";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-transform: uppercase;
+  overflow: hidden;
+   -webkit-transition: ease 0.3s;
+   transition: ease 0.3s;
+   position: relative;
+   display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     @media only screen and (max-width: 600px){
+       padding:18px 0px;
+   }
+     &:hover{
+       background-color: black;
+       border: 3px solid #dc0303;
+     }
+  &:after{
+    content: '';
+      display: block;
+      width: 30px;
+        height: 200px;
+        opacity: 0.5;
+      margin-left: 60px;
+      background: linear-gradient(270deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.8),hsla(0,0%,100%,0)) no-repeat -2px 0;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#b3ffffff',GradientType=0 );
+      position: absolute;
+      top: -40px;
+        left: -40px;
+      z-index: 1;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-transition: all 0.1s;
+      transition: all 0.1s;
+      -webkit-animation-name: slideme;
+      animation-name: slideme;
+      -webkit-animation-duration: 3s;
+      animation-duration: 3s;
+      -webkit-animation-delay: 0.05s;
+      animation-delay: 0.05s;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+
+  }
+}
